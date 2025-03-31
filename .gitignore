@@ -18,4 +18,26 @@ ENV/
 
 # OS
 .DS_Store
-Thumbs.db 
+Thumbs.db
+
+# Large media files
+*.mp4
+*.mov
+*.avi
+*.wmv
+*.flv
+*.mkv
+
+# Image files (if they're too large)
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+
+# Dependencies
+node_modules/
+venv/
+env/
+__pycache__/
+*.pyc 
