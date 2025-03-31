@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Payment Images</title>
+</head>
+<body>
+    <canvas id="qrCanvas" width="200" height="200"></canvas>
+    <canvas id="paytmLogo" width="200" height="60"></canvas>
+    <canvas id="gpayLogo" width="200" height="60"></canvas>
+    <canvas id="phonepeLogo" width="200" height="60"></canvas>
+    <canvas id="bhimLogo" width="200" height="60"></canvas>
+
+    <script>
+        // Generate QR Code
+        const qrCanvas = document.getElementById('qrCanvas');
+        const qrCtx = qrCanvas.getContext('2d');
+        
+        // Draw QR code pattern (simplified for demo)
+        qrCtx.fillStyle = '#000';
+        qrCtx.fillRect(20, 20, 160, 160);
+        
+        // Add white squares for QR code pattern
+        qrCtx.fillStyle = '#fff';
+        qrCtx.fillRect(40, 40, 40, 40);
+        qrCtx.fillRect(120, 40, 40, 40);
+        qrCtx.fillRect(40, 120, 40, 40);
+        
+        // Save QR code
+        const qrLink = document.createElement('a');
+        qrLink.download = 'sample-qr.png';
+        qrLink.href = qrCanvas.toDataURL('image/png');
+        qrLink.click();
+
+        // Generate Paytm Logo
+        const paytmCanvas = document.getElementById('paytmLogo');
+        const paytmCtx = paytmCanvas.getContext('2d');
+        
+        paytmCtx.fillStyle = '#00BAF2';
+        paytmCtx.fillRect(0, 0, 200, 60);
+        
+        paytmCtx.fillStyle = '#fff';
+        paytmCtx.font = 'bold 30px Arial';
+        paytmCtx.textAlign = 'center';
+        paytmCtx.textBaseline = 'middle';
+        paytmCtx.fillText('Paytm', 100, 30);
+        
+        // Save Paytm logo
+        const paytmLink = document.createElement('a');
+        paytmLink.download = 'paytm-logo.png';
+        paytmLink.href = paytmCanvas.toDataURL('image/png');
+        paytmLink.click();
+
+        // Generate Google Pay Logo
+        const gpayCanvas = document.getElementById('gpayLogo');
+        const gpayCtx = gpayCanvas.getContext('2d');
+        
+        gpayCtx.fillStyle = '#4285F4';
+        gpayCtx.fillRect(0, 0, 200, 60);
+        
+        gpayCtx.fillStyle = '#fff';
+        gpayCtx.font = 'bold 30px Arial';
+        gpayCtx.textAlign = 'center';
+        gpayCtx.textBaseline = 'middle';
+        gpayCtx.fillText('Google Pay', 100, 30);
+        
+        // Save Google Pay logo
+        const gpayLink = document.createElement('a');
+        gpayLink.download = 'gpay-logo.png';
+        gpayLink.href = gpayCanvas.toDataURL('image/png');
+        gpayLink.click();
+
+        // Generate PhonePe Logo
+        const phonepeCanvas = document.getElementById('phonepeLogo');
+        const phonepeCtx = phonepeCanvas.getContext('2d');
+        
+        phonepeCtx.fillStyle = '#5F259F';
+        phonepeCtx.fillRect(0, 0, 200, 60);
+        
+        phonepeCtx.fillStyle = '#fff';
+        phonepeCtx.font = 'bold 30px Arial';
+        phonepeCtx.textAlign = 'center';
+        phonepeCtx.textBaseline = 'middle';
+        phonepeCtx.fillText('PhonePe', 100, 30);
+        
+        // Save PhonePe logo
+        const phonepeLink = document.createElement('a');
+        phonepeLink.download = 'phonepe-logo.png';
+        phonepeLink.href = phonepeCanvas.toDataURL('image/png');
+        phonepeLink.click();
+
+        // Generate BHIM Logo
+        const bhimCanvas = document.getElementById('bhimLogo');
+        const bhimCtx = bhimCanvas.getContext('2d');
+        
+        bhimCtx.fillStyle = '#00AEEF';
+        bhimCtx.fillRect(0, 0, 200, 60);
+        
+        bhimCtx.fillStyle = '#fff';
+        bhimCtx.font = 'bold 30px Arial';
+        bhimCtx.textAlign = 'center';
+        bhimCtx.textBaseline = 'middle';
+        bhimCtx.fillText('BHIM', 100, 30);
+        
+        // Save BHIM logo
+        const bhimLink = document.createElement('a');
+        bhimLink.download = 'bhim-logo.png';
+        bhimLink.href = bhimCanvas.toDataURL('image/png');
+        bhimLink.click();
+    </script>
+</body>
+</html> 
